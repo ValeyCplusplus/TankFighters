@@ -14,11 +14,12 @@ class TANKFIGHTERS_API ATankAIController : public APlayerController
 {
 	GENERATED_BODY()
 
+public:
+	//virtual void Tick(float DeltaTime) override;
+	virtual void BeginPlay() override;
 
 private:
-	ATank* GetControlledAITank() const;
-
-	virtual void BeginPlay() override;
+	ATank* GetControlledTank() const;
 
 	ATank* GetPlayerTank() const;
 };
